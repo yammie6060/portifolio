@@ -1,26 +1,106 @@
-@import "tailwindcss";
+/* ── Google Fonts ─────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&family=Syne:wght@400;500;600;700;800&display=swap");
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #08080a;
+  color: #f0eee8;
+  font-family: "Syne", sans-serif;
+  overflow-x: hidden;
+  cursor: none;
 }
+
+/* Grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.28;
+}
+
+::selection {
+  background: #c8a96e;
+  color: #08080a;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 3px; }
+::-webkit-scrollbar-track  { background: #08080a; }
+::-webkit-scrollbar-thumb  { background: #242428; border-radius: 4px; }
+
+/* ── Scroll-reveal ────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity   0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible         { opacity: 1; transform: translateY(0); }
+.reveal-d1              { transition-delay: 0.10s; }
+.reveal-d2              { transition-delay: 0.20s; }
+.reveal-d3              { transition-delay: 0.30s; }
+.reveal-d4              { transition-delay: 0.40s; }
+
+/* ── Skill bar ────────────────────────────────────────────────── */
+.skill-bar-fill {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+.skill-card.visible .skill-bar-fill { transform: scaleX(1); }
+
+/* ── Hero grid bg ─────────────────────────────────────────────── */
+.hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  mask-image:         radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+}
+
+/* ── Nav link underline ───────────────────────────────────────── */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 1px;
+  background: #c8a96e;
+  transform: scaleX(0);
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav-link:hover::after { transform: scaleX(1); }
+
+/* ── Projects track fade edge ─────────────────────────────────── */
+.projects-track-wrap::after {
+  content: "";
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 140px;
+  z-index: 10;
+  pointer-events: none;
+  background: linear-gradient(to right, transparent, #08080a);
+}
+
+/* ── Exp item hover bar ───────────────────────────────────────── */
+.exp-item::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: transparent;
+  transition: background 0.25s;
+}
+.exp-item:hover::before { background: #c8a96e; }
