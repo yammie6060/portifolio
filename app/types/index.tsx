@@ -1,4 +1,3 @@
-// ─── Project ──────────────────────────────────────────────────────────────────
 export type TechVariant = "blue" | "green" | "gold";
 
 export interface TechTag {
@@ -15,20 +14,22 @@ export interface Project {
   description: string;
   tech:        TechTag[];
   status:      ProjectStatus;
-  thumbGrad:   string;   // tailwind gradient classes
+  thumbGrad:   string;  
   thumbLabel:  string;
   href:        string;
 }
 
-// ─── Skill ────────────────────────────────────────────────────────────────────
 export interface Skill {
   name:        string;
   description: string;
   level:       number; // 0–100
-  svgPaths:    string[]; // individual SVG <path>/<polyline>/etc. d attributes
+  svgPaths:    string[]; 
 }
-
-// ─── Education ────────────────────────────────────────────────────────────────
+export interface SkillGroup {
+  name: string;
+  iconPaths: string[];
+  skills: Skill[];
+}
 export interface EducationItem {
   num:         string;
   period:      string;
@@ -38,7 +39,6 @@ export interface EducationItem {
   tags:        string[];
 }
 
-// ─── Experience ───────────────────────────────────────────────────────────────
 export interface ExperienceItem {
   period:      string;
   current?:    boolean;
@@ -48,7 +48,6 @@ export interface ExperienceItem {
   chips:       string[];
 }
 
-// ─── Nav ──────────────────────────────────────────────────────────────────────
 export interface NavLink {
   label: string;
   href:  string;

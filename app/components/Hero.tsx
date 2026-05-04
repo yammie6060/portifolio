@@ -7,7 +7,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center px-4 sm:px-8 md:px-16 pt-36 pb-20 overflow-hidden bg-bg"
     >
       {/* Grid background */}
-      <div className="hero-grid-bg absolute inset-0 z-0 pointer-events-none" />
+      <div className="absolute inset-0 z-0 pointer-events-none" />
 
       {/* Glow orb */}
       <div
@@ -24,18 +24,18 @@ export default function Hero() {
         <div className="text-center lg:text-left">
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 mb-6 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.1s_both]">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse-dot" />
-            <span className="text-[0.7rem] font-bold tracking-[0.18em] uppercase text-gold">
-              Available for New Opportunities
+            <span className="w-1.5 h-1.5 rounded-full bg-green-400/10 animate-pulse-dot" />
+            <span className="text-[1.7rem] font-bold tracking-[0.18em] text-green-400">
+              Hi there, I&apos;m
             </span>
           </div>
 
           {/* Headline */}
           <h1 className="font-display leading-[0.95] tracking-tight animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.2s_both]">
-            <span className="block text-[clamp(2.5rem,7vw,7.5rem)] font-bold text-ink">
+            <span className="block text-[clamp(1.5rem,5vw,5.5rem)] font-bold text-ink">
               Yamikani
             </span>
-            <span className="block text-[clamp(2.5rem,7vw,7.5rem)] font-bold italic text-gold">
+            <span className="block text-[clamp(1.5rem,5vw,5.5rem)] font-bold italic text-green-400">
               Suwedi
             </span>
             <span
@@ -57,7 +57,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-9 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.45s_both]">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-gold text-bg rounded-sm text-[0.8rem] font-bold tracking-[0.08em] uppercase transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(200,169,110,0.25)]"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-green-500 text-bg rounded-sm text-[0.8rem] font-bold tracking-[0.08em] uppercase transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(200,169,110,0.25)]"
             >
               View Work
               <svg
@@ -84,14 +84,13 @@ export default function Hero() {
         <div className="animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.3s_both]">
           <div className="relative group">
             {/* Outer glow ring */}
-            <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
+            <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-green-400/20 via-green-400/10 to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
             
             {/* Image container */}
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-white/10 shadow-2xl transition-all duration-500 group-hover:border-gold/30 group-hover:scale-105">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-white/10 shadow-2xl transition-all duration-500 group-hover:border-green-400/30 group-hover:scale-105">
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-gold/10 z-10 rounded-full" />
+              <div className="absolute inset-0 bg-gradient-to-br from-green via-transparent to-green z-10 rounded-full" />
               
-              {/* Next.js Image */}
               <Image
                 src="/_d.jpg" 
                 alt="Yamikani Suwedi"
@@ -103,12 +102,12 @@ export default function Hero() {
               />
               
               {/* Decorative ring */}
-              <div className="absolute inset-0 rounded-full ring-1 ring-gold/0 group-hover:ring-gold/40 transition-all duration-500 pointer-events-none" />
+              <div className="absolute inset-0 rounded-full ring-1 ring-green-400/0 group-hover:ring-green-400/40 transition-all duration-500 pointer-events-none" />
             </div>
             
             {/* Accent dots */}
-            <div className="absolute -top-2 -right-2 w-3 h-3 rounded-full bg-gold/60 animate-pulse" />
-            <div className="absolute -bottom-1 -left-1 w-2 h-2 rounded-full bg-gold/40" />
+            <div className="absolute -top-2 -right-2 w-3 h-3 rounded-full bg-green-400/60 animate-pulse" />
+            <div className="absolute -bottom-1 -left-1 w-2 h-2 rounded-full bg-green-400/40" />
           </div>
         </div>
       </div>
@@ -118,7 +117,7 @@ export default function Hero() {
         <span className="text-[0.65rem] tracking-[0.15em] uppercase text-ink-3">
           Scroll
         </span>
-        <div className="w-px h-12 bg-gradient-to-b from-gold to-transparent animate-scroll-drop" />
+        <div className="w-px h-12 bg-gradient-to-b from-green-400 to-transparent animate-scroll-drop" />
       </div>
     </section>
   );

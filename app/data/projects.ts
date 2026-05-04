@@ -1,6 +1,7 @@
 import type { Project } from "../types";
 
 export const projects: Project[] = [
+  
   {
     id:          "lihims",
     title:       "LIHIMS",
@@ -16,8 +17,9 @@ export const projects: Project[] = [
     status:     "live",
     thumbGrad:  "from-[#0d1f35] to-[#1a3c5e]",
     thumbLabel: "LIHIMS",
-    href:       "#",
+    href:       "",
   },
+
   {
     id:          "elegance",
     title:       "Elegance Coaches",
@@ -33,22 +35,23 @@ export const projects: Project[] = [
     status:     "live",
     thumbGrad:  "from-[#0d1f1a] to-[#1a3d2e]",
     thumbLabel: "EC",
-    href:       "#",
+    href:       "https://elegancecoaches.com",
   },
+
   {
-    id:          "taxi",
-    title:       "Taxi Booking App",
-    subtitle:    "Real-Time Ride Booking",
+    id:          "Mindtech Website",
+    title:       "Mindtech Website",
+    subtitle:    "Company Portfolio Site",
     description:
-      "Real-time ride booking system with driver matching, booking state transitions, live status updates, and ride history. Handles concurrent bookings with a reliable flow engine.",
+      "A modern, responsive website for Mindtech, showcasing their services and portfolio. Built with a focus on clean design, fast performance, and seamless user experience. Implemented with Next.js and Tailwind CSS.",
     tech: [
-      { label: "JavaScript", variant: "gold" },
-      { label: "PHP",        variant: "gold" },
-      { label: "MySQL",      variant: "blue" },
+      { label: "Next.js",    variant: "gold" },
+      { label: "TypeScript", variant: "green" },
+      { label: "Tailwind CSS", variant: "blue" },
     ],
     status:     "live",
     thumbGrad:  "from-[#1f1005] to-[#3d2010]",
-    thumbLabel: "Taxi",
-    href:       "#",
+    thumbLabel: "MT",
+    href:       "https://mindtechs.vercel.app/",
   },
 ];

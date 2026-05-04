@@ -13,7 +13,7 @@ export default function Footer() {
 
         {/* Logo */}
         <Link href="#hero" className="font-display text-xl font-bold text-ink shrink-0">
-          Y<span className="text-gold">.</span>Suwedi
+          Y<span className="text-green-400">.</span>Suwedi
         </Link>
 
         {/* Copyright — centre on desktop, stacked on mobile */}
@@ -27,7 +27,7 @@ export default function Footer() {
             <a
               key={l.href}
               href={l.href}
-              className="text-[0.72rem] text-ink-3 tracking-[0.06em] uppercase transition-colors hover:text-gold"
+              className="text-[0.72rem] text-ink-3 tracking-[0.06em] uppercase transition-colors hover:text-green-400"
             >
               {l.label}
             </a>

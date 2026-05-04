@@ -50,7 +50,7 @@ export default function Navbar() {
           href="#hero"
           className="font-display text-2xl font-bold tracking-wide text-ink z-50"
         >
-          Y<span className="text-gold">.</span>Suwedi
+          Y<span className="text-green-400">.</span>Suwedi
         </Link>
 
         {/* Desktop links */}
@@ -60,7 +60,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="border border-gold rounded-sm px-5 py-2 text-gold text-[0.75rem] font-bold tracking-widest uppercase transition-colors hover:bg-gold hover:text-bg"
+                  className="border border-green-400 rounded-sm px-5 py-2 text-green-400 text-[0.75rem] font-bold tracking-widest uppercase transition-colors hover:bg-green-400 hover:text-bg"
                 >
                   {link.label}
                 </a>
@@ -121,7 +121,7 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="inline-block border border-gold rounded-sm px-10 py-3.5 text-gold text-[0.85rem] font-bold tracking-widest uppercase transition-colors hover:bg-gold hover:text-bg"
+                  className="inline-block border border-green-400 rounded-sm px-10 py-3.5 text-green-400 text-[0.85rem] font-bold tracking-widest uppercase transition-colors hover:bg-green-400 hover:text-bg"
                   style={{ transitionDelay: open ? `${i * 40}ms` : "0ms" }}
                 >
                   {link.label}

@@ -45,7 +45,7 @@ function ExpRow({ item, delay }: { item: ExperienceItem; delay: number }) {
           <h3 className="font-display text-[1.25rem] sm:text-[1.45rem] font-bold text-ink mb-0.5">
             {item.role}
           </h3>
-          <p className="text-[0.88rem] text-gold font-semibold mb-3">{item.company}</p>
+          <p className="text-[0.88rem] text-green-400 font-semibold mb-3">{item.company}</p>
           <p className="text-[0.88rem] text-ink-2 leading-[1.8]">{item.description}</p>
 
           {/* Chips */}
@@ -88,7 +88,7 @@ export default function Experience() {
           <SectionLabel num="05" title="Experience" />
           <h2 className="font-display text-[clamp(2.4rem,4vw,3.8rem)] font-bold leading-[1.05] text-ink">
             Career<br />
-            <em className="italic text-gold">Timeline</em>
+            <em className="italic text-green-400">Timeline</em>
           </h2>
         </div>
 

@@ -2,10 +2,7 @@
 
 import { useRef, useCallback } from "react";
 
-/**
- * Provides mouse-drag scrolling for a horizontally scrollable container.
- * Returns a ref to attach to the container and event handlers.
- */
+
 export function useDragScroll<T extends HTMLElement>() {
   const ref       = useRef<T>(null);
   const isDown    = useRef(false);

@@ -8,9 +8,6 @@ import { useDragScroll } from "@/app/hooks/useDragScroll";
 import { projects } from "@/app/data/projects";
 import type { Project } from "../types";
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   Scroll-reveal helper
-───────────────────────────────────────────────────────────────────────────── */
 function useRevealRef<T extends HTMLElement>() {
   const ref = useRef<T>(null);
   useEffect(() => {
@@ -31,9 +28,6 @@ function useRevealRef<T extends HTMLElement>() {
   return ref;
 }
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   Project icon — keyed by project id
-───────────────────────────────────────────────────────────────────────────── */
 function ProjectIcon({ id }: { id: string }) {
   const base =
     "w-6 h-6 fill-none stroke-white/60 stroke-[1.5] stroke-linecap-round stroke-linejoin-round";
@@ -67,9 +61,6 @@ function ProjectIcon({ id }: { id: string }) {
   );
 }
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   Project card
-───────────────────────────────────────────────────────────────────────────── */
 function ProjectCard({ project }: { project: Project }) {
   const ref = useRef<HTMLElement>(null);
 
@@ -94,7 +85,7 @@ function ProjectCard({ project }: { project: Project }) {
       ref={ref}
       className="reveal group flex-none w-[calc(100vw-3rem)] sm:w-[360px] md:w-[400px] bg-bg-2 border border-white/[0.07] rounded-2xl overflow-hidden transition-all duration-300 hover:border-white/[0.14] hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
     >
-      {/* ── Thumbnail ─────────────────────────────────────── */}
+
       <div
         className={`relative h-48 sm:h-52 bg-gradient-to-br ${project.thumbGrad} flex items-center justify-center overflow-hidden`}
       >
@@ -117,7 +108,6 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
       </div>
 
-      {/* ── Body ──────────────────────────────────────────── */}
       <div className="p-5 sm:p-6 flex flex-col">
         <h3 className="font-display text-[1.25rem] sm:text-[1.45rem] font-bold text-ink mb-1">
           {project.title}
@@ -139,7 +129,7 @@ function ProjectCard({ project }: { project: Project }) {
         {/* CTA link */}
         <Link
           href={project.href}
-          className="inline-flex items-center gap-1.5 text-[0.75rem] font-bold tracking-[0.08em] uppercase text-ink-3 transition-colors hover:text-gold group/link mt-auto"
+          className="inline-flex items-center gap-1.5 text-[0.75rem] font-bold tracking-[0.08em] uppercase text-ink-3 transition-colors hover:text-green-400 group/link mt-auto"
         >
           View Project
           <svg
@@ -159,9 +149,6 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   Section
-───────────────────────────────────────────────────────────────────────────── */
 export default function Projects() {
   const headerRef = useRevealRef<HTMLDivElement>();
 
@@ -187,7 +174,7 @@ export default function Projects() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <h2 className="font-display text-[clamp(2.4rem,4vw,3.8rem)] font-bold leading-[1.05] text-ink">
             Selected<br />
-            <em className="italic text-gold">Work</em>
+            <em className="italic text-green-400">Work</em>
           </h2>
 
           {/* Scroll arrow controls */}

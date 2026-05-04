@@ -8,17 +8,17 @@ const SOCIAL_LINKS = [
     label: "yamikanisuwedi6@gmail.com",
     href:  "mailto:yamikanisuwedi6@gmail.com",
     icon:  (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-gold fill-none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-green-400 fill-none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="4" width="20" height="16" rx="2" />
         <path d="M2 7l10 7 10-7" />
       </svg>
     ),
   },
   {
-    label: "github.com/yamikani",
+    label: "github.com",
     href:  "https://github.com/yammie6060",
     icon:  (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-gold fill-none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-green-400 fill-none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
       </svg>
     ),
@@ -27,7 +27,7 @@ const SOCIAL_LINKS = [
     label: "linkedin.com/in/yamikani",
     href:  "https://linkedin.com/",
     icon:  (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-gold fill-none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-green-400 fill-none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
         <rect x="2" y="9" width="4" height="12" />
         <circle cx="4" cy="4" r="2" />
@@ -53,10 +53,10 @@ export default function Contact() {
 
         {/* Left */}
         <div ref={leftRef} className="reveal">
-          <SectionLabel num="06" title="Contact" />
+          <SectionLabel num="05" title="Contact" />
           <h2 className="font-display text-[clamp(2.4rem,4vw,3.8rem)] font-bold leading-[1.05] text-ink mb-6">
             Let&apos;s build<br />
-            <em className="italic text-gold">something</em>
+            <em className="italic text-green-400">something</em>
           </h2>
           <p className="text-[0.97rem] text-ink-2 leading-[1.9] mb-8 max-w-md">
             Open to new projects, collaborations, and full-time opportunities.
@@ -83,48 +83,11 @@ export default function Contact() {
               </a>
             ))}
           </div>
-        </div>
 
-        {/* Right: form */}
-        <div ref={rightRef} className="reveal reveal-d2">
-          <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
-            <div className="flex flex-col gap-2">
-              <label className="text-[0.68rem] font-bold tracking-[0.12em] uppercase text-ink-3">
-                Your Name
-              </label>
-              <input
-                type="text"
-                placeholder="Yamikani Suwedi"
-                className="bg-bg-3 border border-white/[0.07] text-ink placeholder:text-ink-3 px-4 py-3.5 rounded-sm text-[0.88rem] outline-none transition-colors focus:border-gold focus:bg-bg"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-[0.68rem] font-bold tracking-[0.12em] uppercase text-ink-3">
-                Email
-              </label>
-              <input
-                type="email"
-                placeholder="yamikanisuwedi6@gmail.com"
-                className="bg-bg-3 border border-white/[0.07] text-ink placeholder:text-ink-3 px-4 py-3.5 rounded-sm text-[0.88rem] outline-none transition-colors focus:border-gold focus:bg-bg"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-[0.68rem] font-bold tracking-[0.12em] uppercase text-ink-3">
-                Message
-              </label>
-              <textarea
-                rows={5}
-                placeholder="Tell me about your project or opportunity..."
-                className="bg-bg-3 border border-white/[0.07] text-ink placeholder:text-ink-3 px-4 py-3.5 rounded-sm text-[0.88rem] outline-none resize-none transition-colors focus:border-gold focus:bg-bg"
-              />
-            </div>
-            <button
-              type="submit"
-              className="self-start px-8 py-3.5 bg-gold text-bg text-[0.8rem] font-bold tracking-[0.1em] uppercase rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(200,169,110,0.25)]"
-            >
-              Send Message →
-            </button>
-          </form>
+          <div className="mt-12 text-sm text-green-400 text-center md:text-right font-bold tracking-wide">
+            <p>Available for New Opportunities.</p>
+
+          </div>
         </div>
 
       </div>

@@ -1,7 +1,6 @@
 import type { Skill } from "../types";
 
 export const technicalSkills: Skill[] = [
-  // ── Backend ──────────────────────────────────────────────────────────────
   {
     name: "FastAPI",
     description: "High-performance Python APIs with async support, dependency injection, and automatic OpenAPI docs.",
@@ -27,13 +26,14 @@ export const technicalSkills: Skill[] = [
       "M9 10h.01M15 10h.01",
     ],
   },
+
   {
     name: "REST APIs",
     description: "Designing and documenting RESTful services with clean resource models, versioning, and auth flows.",
     level: 93,
     svgPaths: ["M4 6h16M4 12h16M4 18h16"],
   },
-  // ── Frontend ─────────────────────────────────────────────────────────────
+
   {
     name: "Next.js",
     description: "Full-stack React framework for server-rendered and statically generated production web apps.",
@@ -43,6 +43,7 @@ export const technicalSkills: Skill[] = [
       "M12 8v6M9.5 16.5h5",
     ],
   },
+
   {
     name: "TypeScript",
     description: "Type-safe JavaScript at scale — interfaces, generics, and strict mode across frontend codebases.",
@@ -52,6 +53,7 @@ export const technicalSkills: Skill[] = [
       "M14 9h3M14 12h3M8 9v6M11 9H8",
     ],
   },
+
   {
     name: "React",
     description: "Component-driven UIs with hooks, context, and performance optimisation for complex frontends.",
@@ -62,13 +64,14 @@ export const technicalSkills: Skill[] = [
       "M2 12h4M18 12h4",
     ],
   },
+
   {
     name: "Tailwind CSS",
     description: "Utility-first styling for rapid, consistent UI development with full design-system control.",
     level: 88,
     svgPaths: ["M3 7c1-4 5-5 9-3s7 6 6 10-5 5-9 3-7-6-6-10z"],
   },
-  // ── Infrastructure ────────────────────────────────────────────────────────
+
   {
     name: "Docker",
     description: "Containerising services for consistent dev-to-production environments and microservice isolation.",
@@ -78,6 +81,7 @@ export const technicalSkills: Skill[] = [
       "M3 16v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2",
     ],
   },
+
   {
     name: "Git & CI/CD",
     description: "Version control workflows, branching strategies, and automated pipelines for reliable deployments.",
@@ -120,16 +124,6 @@ export const professionalSkills: Skill[] = [
     ],
   },
   {
-    name: "Technical Writing",
-    description: "Producing clear API docs, architecture decision records, and onboarding guides for engineering teams.",
-    level: 80,
-    svgPaths: [
-      "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z",
-      "M14 2v6h6",
-      "M16 13H8M16 17H8M10 9H8",
-    ],
-  },
-  {
     name: "Collaboration",
     description: "Working across teams, time zones, and disciplines — unblocking peers and sharing knowledge proactively.",
     level: 90,
@@ -165,17 +159,6 @@ export const professionalSkills: Skill[] = [
     svgPaths: [
       "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z",
       "M12 6v6l4 2",
-    ],
-  },
-  {
-    name: "Mentorship",
-    description: "Guiding junior developers through code reviews, pair programming, and structured knowledge transfer.",
-    level: 78,
-    svgPaths: [
-      "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2",
-      "M23 21v-2a4 4 0 0 0-3-3.87",
-      "M16 3.13a4 4 0 0 1 0 7.75",
-      "M9 7a4 4 0 1 0 0 8 4 4 0 0 0 0-8z",
     ],
   },
   {

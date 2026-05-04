@@ -33,7 +33,7 @@ function EduCard({ item, delay }: { item: EducationItem; delay: number }) {
         {item.num}
       </div>
 
-      <span className="inline-block text-[0.68rem] font-bold tracking-[0.12em] uppercase text-gold mb-2">
+      <span className="inline-block text-[0.68rem] font-bold tracking-[0.12em] uppercase text-green-400 mb-2">
         {item.period}
       </span>
 
@@ -80,7 +80,7 @@ export default function Education() {
           <SectionLabel num="04" title="Education" />
           <h2 className="font-display text-[clamp(2.4rem,4vw,3.8rem)] font-bold leading-[1.05] text-ink">
             Academic<br />
-            <em className="italic text-gold">Foundation</em>
+            <em className="italic text-green-400">Foundation</em>
           </h2>
         </div>
 

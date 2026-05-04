@@ -42,12 +42,12 @@ export default function Cursor() {
       {/* Dot */}
       <div
         ref={dotRef}
-        className="fixed z-[9999] pointer-events-none w-2.5 h-2.5 rounded-full bg-gold -translate-x-1/2 -translate-y-1/2 mix-blend-difference"
+        className="fixed z-[9999] pointer-events-none w-2.5 h-2.5 rounded-full bg-green-400 -translate-x-1/2 -translate-y-1/2 mix-blend-difference"
       />
       {/* Ring */}
       <div
         ref={ringRef}
-        className="fixed z-[9998] pointer-events-none w-9 h-9 rounded-full border border-gold/40 -translate-x-1/2 -translate-y-1/2 transition-[width,height] duration-300"
+        className="fixed z-[9998] pointer-events-none w-9 h-9 rounded-full border border-green-400/40 -translate-x-1/2 -translate-y-1/2 transition-[width,height] duration-300"
       />
     </>
   );

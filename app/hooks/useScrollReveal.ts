@@ -2,11 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-/**
- * Attaches an IntersectionObserver to the returned ref.
- * When the element enters the viewport the `visible` class is added,
- * triggering the CSS reveal animation defined in globals.css.
- */
+
 export function useScrollReveal<T extends HTMLElement>(threshold = 0.12) {
   const ref = useRef<T>(null);
 

@@ -16,7 +16,7 @@ export default function About() {
           <SectionLabel num="01" title="About" />
           <h2 className="font-display text-[clamp(2.4rem,4vw,3.8rem)] font-bold leading-[1.05] text-ink">
             Crafting systems<br />that{" "}
-            <em className="text-gold not-italic">endure</em>
+            <em className="text-green-400 not-italic">endure</em>
           </h2>
           <div className="mt-8 space-y-4 text-[0.97rem] text-ink-2 leading-[1.9]">
             <p>
@@ -81,4 +81,7 @@ export default function About() {
       </div>
     </section>
   );
+
 }
+
+
