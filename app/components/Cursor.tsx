@@ -1,9 +1,10 @@
+// app/components/Cursor.tsx
 "use client";
 
 import { useEffect, useRef } from "react";
 
 export default function Cursor() {
-  const dotRef  = useRef<HTMLDivElement>(null);
+  const dotRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -18,13 +19,13 @@ export default function Cursor() {
     const tick = () => {
       if (dotRef.current) {
         dotRef.current.style.left = `${mx}px`;
-        dotRef.current.style.top  = `${my}px`;
+        dotRef.current.style.top = `${my}px`;
       }
       rx += (mx - rx) * 0.12;
       ry += (my - ry) * 0.12;
       if (ringRef.current) {
         ringRef.current.style.left = `${rx}px`;
-        ringRef.current.style.top  = `${ry}px`;
+        ringRef.current.style.top = `${ry}px`;
       }
       raf = requestAnimationFrame(tick);
     };
@@ -39,15 +40,15 @@ export default function Cursor() {
 
   return (
     <>
-      {/* Dot */}
+      {/* Dot - White for dark theme */}
       <div
         ref={dotRef}
-        className="fixed z-[9999] pointer-events-none w-2.5 h-2.5 rounded-full bg-green-400 -translate-x-1/2 -translate-y-1/2 mix-blend-difference"
+        className="fixed z-[9999] pointer-events-none w-2 h-2 rounded-full bg-white -translate-x-1/2 -translate-y-1/2"
       />
-      {/* Ring */}
+      {/* Ring - White border with subtle opacity */}
       <div
         ref={ringRef}
-        className="fixed z-[9998] pointer-events-none w-9 h-9 rounded-full border border-green-400/40 -translate-x-1/2 -translate-y-1/2 transition-[width,height] duration-300"
+        className="fixed z-[9998] pointer-events-none w-8 h-8 rounded-full border border-white/30 -translate-x-1/2 -translate-y-1/2 transition-[width,height] duration-300"
       />
     </>
   );

@@ -1,16 +1,15 @@
+// app/components/Nav.tsx
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { NavLink } from "../types";
 
-const NAV_LINKS: NavLink[] = [
-  { label: "About",      href: "#about"      },
-  { label: "Skills",     href: "#skills"     },
-  { label: "Projects",   href: "#projects"   },
-  { label: "Education",  href: "#education"  },
+const NAV_LINKS = [
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
-  { label: "Hire Me",    href: "#contact", cta: true },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -24,122 +23,121 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    const handler = () => { if (window.innerWidth >= 768) setOpen(false); };
+    const handler = () => {
+      if (window.innerWidth >= 768) setOpen(false);
+    };
     window.addEventListener("resize", handler);
     return () => window.removeEventListener("resize", handler);
   }, []);
 
-  // Prevent body scroll when drawer is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   return (
     <>
       <nav
         className={[
-          "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-16 py-5 transition-all duration-300",
+          "fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 md:px-12 py-3 sm:py-4 transition-all duration-300",
           scrolled || open
-            ? "border-b border-white/[0.07] bg-bg/90 backdrop-blur-xl"
-            : "border-b border-transparent",
+            ? "bg-black/80 backdrop-blur-xl border-b border-white/5"
+            : "bg-transparent",
         ].join(" ")}
       >
-        {/* Logo */}
-        <Link
-          href="#hero"
-          className="font-display text-2xl font-bold tracking-wide text-ink z-50"
-        >
-          Y<span className="text-green-400">.</span>Suwedi
-        </Link>
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          {/* Logo */}
+          <Link 
+            href="#hero" 
+            className="flex items-center gap-2 z-50 shrink-0"
+          >
+            <span className="font-display text-xl font-bold tracking-wide text-white">
+              Y<span className="text-white/30">.</span>Suwedi
+            </span>
+          </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-10 list-none m-0 p-0">
-          {NAV_LINKS.map((link) =>
-            link.cta ? (
+          {/* Desktop Navigation - Centered */}
+          <ul className="hidden md:flex items-center gap-8 list-none m-0 p-0">
+            {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="border border-green-400 rounded-sm px-5 py-2 text-green-400 text-[0.75rem] font-bold tracking-widest uppercase transition-colors hover:bg-green-400 hover:text-bg"
+                  className="text-[0.85rem] font-medium tracking-wide text-white/50 transition-colors hover:text-white"
                 >
                   {link.label}
                 </a>
               </li>
-            ) : (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="nav-link relative text-[0.75rem] font-semibold tracking-[0.12em] uppercase text-ink-2 transition-colors hover:text-ink"
-                >
-                  {link.label}
-                </a>
-              </li>
-            )
-          )}
-        </ul>
+            ))}
+          </ul>
 
-        {/* Hamburger button — mobile only */}
-        <button
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          className="relative z-50 md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px]"
-        >
-          <span
-            className={[
-              "block h-px w-6 bg-ink transition-all duration-300 origin-center",
-              open ? "rotate-45 translate-y-[6px]" : "",
-            ].join(" ")}
-          />
-          <span
-            className={[
-              "block h-px bg-ink transition-all duration-300",
-              open ? "w-0 opacity-0" : "w-6 opacity-100",
-            ].join(" ")}
-          />
-          <span
-            className={[
-              "block h-px w-6 bg-ink transition-all duration-300 origin-center",
-              open ? "-rotate-45 -translate-y-[6px]" : "",
-            ].join(" ")}
-          />
-        </button>
+          {/* CTA Button - Visible on desktop */}
+          <a
+            href="#contact"
+            className="hidden md:inline-flex items-center rounded-full bg-white text-black px-6 py-2 text-[0.8rem] font-semibold tracking-wide transition-all hover:bg-white/90 hover:scale-[1.02]"
+          >
+            Get in touch
+          </a>
+
+          {/* Mobile Menu Button - Only shows on small screens */}
+          <button
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            className="md:hidden flex flex-col gap-1.5 z-50 p-1"
+          >
+            <span
+              className={[
+                "block h-0.5 bg-white transition-all duration-300 origin-center",
+                open ? "w-6 rotate-45 translate-y-[6px]" : "w-6",
+              ].join(" ")}
+            />
+            <span
+              className={[
+                "block h-0.5 bg-white transition-all duration-300",
+                open ? "w-0 opacity-0" : "w-6",
+              ].join(" ")}
+            />
+            <span
+              className={[
+                "block h-0.5 bg-white transition-all duration-300 origin-center",
+                open ? "w-6 -rotate-45 -translate-y-[6px]" : "w-6",
+              ].join(" ")}
+            />
+          </button>
+        </div>
       </nav>
 
-      {/* Mobile full-screen drawer */}
+      {/* Mobile Navigation - Full screen overlay */}
       <div
         aria-hidden={!open}
         className={[
-          "fixed inset-0 z-40 flex flex-col items-center justify-center bg-bg/[0.97] backdrop-blur-2xl transition-all duration-300 md:hidden",
+          "fixed inset-0 z-40 flex flex-col items-center justify-center bg-black/98 backdrop-blur-2xl transition-all duration-300 md:hidden",
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
         ].join(" ")}
       >
         <ul className="flex flex-col items-center gap-8 list-none m-0 p-0">
-          {NAV_LINKS.map((link, i) =>
-            link.cta ? (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="inline-block border border-green-400 rounded-sm px-10 py-3.5 text-green-400 text-[0.85rem] font-bold tracking-widest uppercase transition-colors hover:bg-green-400 hover:text-bg"
-                  style={{ transitionDelay: open ? `${i * 40}ms` : "0ms" }}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ) : (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="block text-[1.25rem] font-semibold tracking-[0.12em] uppercase text-ink-2 hover:text-ink transition-colors"
-                  style={{ transitionDelay: open ? `${i * 40}ms` : "0ms" }}
-                >
-                  {link.label}
-                </a>
-              </li>
-            )
-          )}
+          {NAV_LINKS.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block text-[1.8rem] font-medium tracking-wide text-white/50 hover:text-white transition-colors"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li className="mt-4">
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="inline-block rounded-full bg-white text-black px-10 py-3 text-[0.9rem] font-semibold tracking-wide transition-colors hover:bg-white/90"
+            >
+              Get in touch
+            </a>
+          </li>
         </ul>
       </div>
     </>

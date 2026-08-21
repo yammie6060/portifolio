@@ -1,15 +1,31 @@
-interface Props {
-  num:   string;
+// app/components/SectionLabel.tsx
+export default function SectionLabel({
+  num,
+  title,
+  tag,
+}: {
+  num: string;
   title: string;
-}
-
-export default function SectionLabel({ num, title }: Props) {
+  /** Optional right-aligned caption, e.g. "MY DIGITAL TOOLKIT" */
+  tag?: string;
+}) {
   return (
-    <div className="inline-flex items-center gap-3 mb-5">
-      <span className="block w-7 h-px bg-gold" />
-      <span className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-green-400">
-        {num} — {title}
-      </span>
+    <div className="flex items-center justify-between gap-4 mb-4 flex-wrap">
+      <div className="flex items-center gap-3">
+        <span className="text-[0.7rem] font-bold tracking-[0.15em] text-white/30">
+          {num}
+        </span>
+        <div className="w-8 h-px bg-white/20" />
+        <span className="text-[0.7rem] font-semibold tracking-[0.2em] uppercase text-white/40">
+          {title}
+        </span>
+      </div>
+
+      {tag && (
+        <span className="text-[0.65rem] font-semibold tracking-[0.18em] uppercase text-white/25">
+          {tag}
+        </span>
+      )}
     </div>
   );
 }

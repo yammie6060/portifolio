@@ -34,12 +34,11 @@ body::before {
   color: #08080a;
 }
 
-/* ── Scrollbar ────────────────────────────────────────────────── */
 ::-webkit-scrollbar        { width: 3px; }
 ::-webkit-scrollbar-track  { background: #08080a; }
 ::-webkit-scrollbar-thumb  { background: #242428; border-radius: 4px; }
 
-/* ── Scroll-reveal ────────────────────────────────────────────── */
+
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -53,7 +52,7 @@ body::before {
 .reveal-d3              { transition-delay: 0.30s; }
 .reveal-d4              { transition-delay: 0.40s; }
 
-/* ── Skill bar ────────────────────────────────────────────────── */
+
 .skill-bar-fill {
   transform: scaleX(0);
   transform-origin: left;
@@ -61,7 +60,7 @@ body::before {
 }
 .skill-card.visible .skill-bar-fill { transform: scaleX(1); }
 
-/* ── Hero grid bg ─────────────────────────────────────────────── */
+
 .hero-grid-bg {
   background-image:
     linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
@@ -71,7 +70,7 @@ body::before {
   mask-image:         radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
 }
 
-/* ── Nav link underline ───────────────────────────────────────── */
+
 .nav-link::after {
   content: "";
   position: absolute;
@@ -83,7 +82,6 @@ body::before {
 }
 .nav-link:hover::after { transform: scaleX(1); }
 
-/* ── Projects track fade edge ─────────────────────────────────── */
 .projects-track-wrap::after {
   content: "";
   position: absolute;
@@ -94,7 +92,6 @@ body::before {
   background: linear-gradient(to right, transparent, #08080a);
 }
 
-/* ── Exp item hover bar ───────────────────────────────────────── */
 .exp-item::before {
   content: "";
   position: absolute;
@@ -104,3 +101,48 @@ body::before {
   transition: background 0.25s;
 }
 .exp-item:hover::before { background: #c8a96e; }
+
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.25);
+  }
+}
+
+@keyframes scrollDrop {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  40% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  80% {
+    opacity: 0;
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -39,11 +39,11 @@ export const projects: Project[] = [
   },
 
   {
-    id:          "Mindtech Website",
-    title:       "Mindtech Website",
+    id:          "Digirise",
+    title:       "Digirise",
     subtitle:    "Company Portfolio Site",
     description:
-      "A modern, responsive website for Mindtech, showcasing their services and portfolio. Built with a focus on clean design, fast performance, and seamless user experience. Implemented with Next.js and Tailwind CSS.",
+      "A modern, responsive website for Digirise, showcasing their services and portfolio. Built with a focus on clean design, fast performance, and seamless user experience. Implemented with Next.js and Tailwind CSS.",
     tech: [
       { label: "Next.js",    variant: "gold" },
       { label: "TypeScript", variant: "green" },
@@ -52,6 +52,6 @@ export const projects: Project[] = [
     status:     "live",
     thumbGrad:  "from-[#1f1005] to-[#3d2010]",
     thumbLabel: "MT",
-    href:       "https://mindtechs.vercel.app/",
+    href:       "https://digirisemalawi.vercel.app/",
   },
 ];
