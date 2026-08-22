@@ -5,7 +5,7 @@ import SectionLabel from "@/app/components/SectionLabel";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const INFO_ROW = [
-  { key: "Role", val: "Software Developer" },
+  { key: "Role", val: "Full-Stack Developer" },
   { key: "Focus", val: "Backend Systems · Web Apps" },
   { key: "Based In", val: "Lilongwe, Malawi" },
 ];
@@ -34,7 +34,7 @@ export default function About() {
                 src="/_d.jpg"
                 alt="Yamikani Suwedi"
                 fill
-                className="object-cover object-center "
+                className="object-cover object-center grayscale"
                 sizes="(max-width: 768px) 100vw, 340px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/10" />
@@ -42,7 +42,7 @@ export default function About() {
               <span className="absolute top-4 right-4 w-2 h-2 rounded-full bg-white/50" />
 
               <div className="absolute bottom-4 left-4 inline-flex items-center px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-sm border border-white/10 text-[0.65rem] font-bold tracking-widest uppercase text-white/70">
-                Software Developer
+                Full-Stack Developer
               </div>
               <span className="absolute bottom-4 right-4 text-[0.65rem] font-semibold tracking-widest text-white/40">
                 01 / 01
@@ -63,7 +63,7 @@ export default function About() {
 
             <div className="space-y-4 text-[0.95rem] text-white/40 leading-[1.9] max-w-xl">
               <p>
-                I&apos;m a Software Developer based in{" "}
+                I&apos;m a full-stack developer based in{" "}
                 <strong className="text-white font-semibold">Malawi</strong>,
                 focused on building backend systems that power real-world
                 institutions — from healthcare inventory platforms to
