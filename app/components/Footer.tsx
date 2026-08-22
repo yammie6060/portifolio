@@ -1,4 +1,3 @@
-// app/components/Footer.tsx
 import Link from "next/link";
 
 const SOCIAL_LINKS = [

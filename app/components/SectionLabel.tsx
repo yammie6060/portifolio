@@ -1,4 +1,4 @@
-// app/components/SectionLabel.tsx
+
 export default function SectionLabel({
   num,
   title,
@@ -6,7 +6,6 @@ export default function SectionLabel({
 }: {
   num: string;
   title: string;
-  /** Optional right-aligned caption, e.g. "MY DIGITAL TOOLKIT" */
   tag?: string;
 }) {
   return (

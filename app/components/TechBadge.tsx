@@ -1,4 +1,3 @@
-// app/components/TechBadge.tsx
 import type { TechTag } from "../types";
 
 const variantClasses: Record<TechTag["variant"], string> = {

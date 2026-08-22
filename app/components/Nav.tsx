@@ -1,4 +1,3 @@
-// app/components/Nav.tsx
 "use client";
 
 import { useState, useEffect } from "react";
