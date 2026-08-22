@@ -34,7 +34,7 @@ export default function About() {
                 src="/hinid.jpg"
                 alt="Yamikani Suwedi"
                 fill
-                className="object-cover object-center grayscale"
+                className="object-cover object-center transition-all duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 340px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/10" />
