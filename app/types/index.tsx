@@ -17,6 +17,7 @@ export interface Project {
   thumbGrad:   string;  
   thumbLabel:  string;
   href:        string;
+  image:       string | null;
 }
 
 export interface Skill {

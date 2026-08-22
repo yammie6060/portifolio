@@ -1,4 +1,3 @@
-// app/components/Contact.tsx
 "use client";
 
 import { useScrollReveal } from "@/app/hooks/useScrollReveal";

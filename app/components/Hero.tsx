@@ -33,9 +33,8 @@ export default function Hero() {
         <div className="text-center lg:text-left">
           {/* Heading */}
           <h1 className="font-display leading-[1.08] tracking-tight text-[clamp(1.8rem,4vw,3.4rem)] font-bold text-white animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.2s_both]">
-            Software Developer building{" "}
-            <span className="text-white/50">reliable systems</span> and{" "}
-            <span className="text-white/50">modern web experiences</span>.
+            Software Developer building{" "} <br />
+            <span className="text-white/50">reliable systems</span>
           </h1>
 
           {/* Subtitle */}
@@ -105,7 +104,7 @@ export default function Hero() {
                 src="/_d.jpg"
                 alt="Yamikani Suwedi"
                 fill
-                className="object-cover object-center transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                className="object-cover object-center transition-all duration-700 group-hover:scale-105"
                 sizes="(max-width: 640px) 208px, (max-width: 768px) 256px, 288px"
                 priority
                 quality={95}

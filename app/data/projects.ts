@@ -1,7 +1,7 @@
+
 import type { Project } from "../types";
 
 export const projects: Project[] = [
-  
   {
     id:          "lihims",
     title:       "LIHIMS",
@@ -18,6 +18,7 @@ export const projects: Project[] = [
     thumbGrad:  "from-[#0d1f35] to-[#1a3c5e]",
     thumbLabel: "LIHIMS",
     href:       "",
+    image:      null, // No image for this project
   },
 
   {
@@ -36,6 +37,7 @@ export const projects: Project[] = [
     thumbGrad:  "from-[#0d1f1a] to-[#1a3d2e]",
     thumbLabel: "EC",
     href:       "https://elegancecoaches.com",
+    image:      null, // No image for this project
   },
 
   {
@@ -51,7 +53,8 @@ export const projects: Project[] = [
     ],
     status:     "live",
     thumbGrad:  "from-[#1f1005] to-[#3d2010]",
-    thumbLabel: "MT",
+    thumbLabel: "DR",
     href:       "https://digirisemalawi.vercel.app/",
+    image:      null
   },
 ];
