@@ -5,7 +5,7 @@ export const projects: Project[] = [
   {
     id:          "lihims",
     title:       "LIHIMS",
-    subtitle:    "Inventory & Logistics Platform",
+    subtitle:    "Lighthouse Inventory Management System",
     description:
       "A full-featured enterprise inventory and logistics management system with multi-level approval workflows, real-time stock tracking, and role-based access control. Built for production reliability.",
     tech: [
@@ -18,15 +18,15 @@ export const projects: Project[] = [
     thumbGrad:  "from-[#0d1f35] to-[#1a3c5e]",
     thumbLabel: "LIHIMS",
     href:       "",
-    image:      null, // No image for this project
+    image:      null, 
   },
 
   {
-    id:          "elegance",
-    title:       "Elegance Coaches",
-    subtitle:    "Fleet & Routes System",
+    id:          "Tikketa",
+    title:       "TIKKETA",
+    subtitle:    "Digital Transport Infrastructure System",
     description:
-      "A comprehensive bus fleet management system for configuring routes, managing seat allocations, setting schedules, and generating operational reports for transport operators.",
+      "A comprehensive transport management system for configuring routes, managing seat allocations, setting schedules, generating operational reports and many other for transport operators.",
     tech: [
       { label: "NestJS",     variant: "green" },
       { label: "PostgreSQL", variant: "blue"  },
@@ -36,8 +36,8 @@ export const projects: Project[] = [
     status:     "live",
     thumbGrad:  "from-[#0d1f1a] to-[#1a3d2e]",
     thumbLabel: "EC",
-    href:       "https://elegancecoaches.com",
-    image:      null, // No image for this project
+    href:       "https://tikketa.com",
+    image:      null, 
   },
 
   {
