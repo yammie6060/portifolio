@@ -35,8 +35,8 @@ export const projects: Project[] = [
     ],
     status:     "live",
     thumbGrad:  "from-[#0d1f1a] to-[#1a3d2e]",
-    thumbLabel: "EC",
-    href:       "https://tikketa.com",
+    thumbLabel: "TK",
+    href:       "https://tikketa.com/",
     image:      null, 
   },
 

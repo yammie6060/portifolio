@@ -20,7 +20,7 @@ function useReveal<T extends HTMLElement>() {
           obs.unobserve(el);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -46,7 +46,7 @@ function CardItem({
   delay: number;
 }) {
   const ref = useReveal<HTMLDivElement>();
-  
+
   return (
     <div
       ref={ref}
@@ -68,7 +68,9 @@ function CardItem({
         {title}
       </h3>
       <p className="text-[0.8rem] text-white/50 font-medium mb-3">{subtitle}</p>
-      <p className="text-[0.82rem] text-white/40 leading-[1.7] line-clamp-3">{description}</p>
+      <p className="text-[0.82rem] text-white/40 leading-[1.7] line-clamp-3">
+        {description}
+      </p>
 
       {tags.length > 0 && (
         <div className="flex flex-wrap gap-1.5 mt-4">
@@ -118,8 +120,7 @@ export default function EducationExperience() {
           <SectionLabel num="04" title="Journey" />
 
           <h2 className="font-display text-[clamp(2.4rem,4vw,3.8rem)] font-bold leading-[1.05] text-white mb-4">
-            Career &amp;{" "}
-            <em className="italic text-white/60">Education</em>
+            Career &amp; <em className="italic text-white/60">Education</em>
           </h2>
 
           <p className="text-[0.95rem] text-white/40 leading-[1.8] max-w-xl">
@@ -134,7 +135,9 @@ export default function EducationExperience() {
                 onClick={() => setTab(t)}
                 className={[
                   "relative pb-3 text-[0.7rem] font-bold tracking-[0.15em] uppercase transition-colors",
-                  tab === t ? "text-white" : "text-white/30 hover:text-white/60",
+                  tab === t
+                    ? "text-white"
+                    : "text-white/30 hover:text-white/60",
                 ].join(" ")}
               >
                 {t}
